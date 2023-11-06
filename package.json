@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "react-scripts": "^5.0.1",
+    "snabbdom": "^3.5.1"
+  },
+  "devDependencies": {
+    "lerna": "^7.4.2"
+  },
+  "scripts": {
+    "start": "lerna run start --scope={counter-app,snabbdom}",
+    "test": "lerna run test --scope=counter-app snabbdom",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff"
+  }
+}
